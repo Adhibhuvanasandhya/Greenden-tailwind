@@ -11,7 +11,12 @@
 <body>
      <!--Responsive Navbar-->
      <nav class="bg-green-200 p-3 flex items-center justify-between shadow-xl sticky top-0 z-10">
-        <h1 class="text-2xl">Greenden</h1>   
+        <h1 class="text-2xl">Greenden</h1> 
+        
+        <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 md:hidden">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+
         <ul class="gap-5 text-gray-600 hidden md:flex">
             <li>
                 <a class="hover:underline hover:text-black" href="index.html">Home</a>
@@ -25,15 +30,34 @@
         </ul>
 
     </nav>
+
+    <!--side Navbar-->
+    <section id="sidenav" class="bg-green-200 fixed z-20 top-0 transition-all duration-1000" style="width: 50%;height: 100vh;right:-50%;">
+        <div class="text-right p-5">
+            <p id= "close-nav" class="inline cursor-pointer">X</p>
+        </div>
+        <ul class="gap-10 text-gray-600 flex flex-col items-center">
+            <li>
+                <a class="hover:underline hover:text-black" href="index.html">Home</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="product.html">Products</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="contact.html">Contact</a>
+            </li>
+        </ul>
+
+    </section>
     <!--Our Products-->
     <section class="text-center">
         <h1 class="text-3xl font-bold mt-5 text-center">Our Products</h1>
-        <input type="text" class="border border-black p-2 m-3" style="width: 80%;" placeholder="search for a Products...">
+        <input id="search" type="text" class="border border-black p-2 m-3" style="width: 80%;" placeholder="search for a Products...">
     </section>
 
     <!--Bestseller-->
     <section class="p-4 text-center">
-        <div class="grid grid-cols-2 md:grid-cols-4 mt-5 gap-5">
+        <div  id="product-container" class="grid grid-cols-2 md:grid-cols-4 mt-5 gap-5">
             <div>
                 <img src="./image/bestseller_1.jpg" class="inline hover:shadow-xl transform hover:-translate-y-2">
                 <h1>Rose Plant</h1>
@@ -82,6 +106,7 @@
         <p>@ 2021 Greenden.com</p>
 
     </section>
+    <script src="product.js"></script>
     
 </body>
 </html>
